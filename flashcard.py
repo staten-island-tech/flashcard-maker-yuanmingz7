@@ -25,4 +25,17 @@ mode = input("teach oer student?: ").lower()
 
 if mode == 'teacher':
     Teacher.flashcardmaker()
+
+
+class Student:
+    @staticmethod #make a variabl;e pitsode s,mt else
+    def flashcardmaker():
+        try:
+            with open("flashcards.json", "r") as file:
+                flashcards = json.load(file)
+        except (FileNotFoundError, json.JSONDecodeError): #wats gonna happen if its emptty
+            flashcards = {}
     
+    
+while True:
+    print(FlashCards.json)
