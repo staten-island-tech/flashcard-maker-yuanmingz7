@@ -1,0 +1,12 @@
+body{
+     background-color: deeppink;
+}
+.header {
+    font-size: 80px;
+}
+img {
+    width: 1200px;
+}
+.container {
+    width: 90vw
+}
