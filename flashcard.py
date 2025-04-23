@@ -2,16 +2,16 @@ import json
 import random
 
 class Teacher:
-    @staticmethod #make a variabl;e pitsode s,mt else
+    @staticmethod 
     def flashcardmaker():
         try:
             with open("flashcards.json", "r") as file:
                 flashcards = json.load(file)
-        except (FileNotFoundError, json.JSONDecodeError): #wats gonna happen if its emptity
+        except (FileNotFoundError, json.JSONDecodeError): 
             flashcards = {}
 
         while True:
-            word = input("en5ter word for flashcard or type exit to quit: ")
+            word = input("enter word for flashcard or type exit to quit: ")
             if word.lower() == 'exit': #lower makes it so its casw sensitive truns unto all lowercase
                 break
             answer = input("Enter answer for flashcard: ")
@@ -30,7 +30,7 @@ class Student:
         try:
             with open("flashcards.json", "r") as file:
                 flashcards = json.load(file)
-        except (FileNotFoundError, json.JSONDecodeError): #wats gonna happen if its emptty
+        except (FileNotFoundError, json.JSONDecodeError): #wats gonna happen if its empty
             print("theres no flashcards")
             return
         
@@ -59,7 +59,7 @@ class Student:
 
         print(f"ur total score is {score} with a streak of {streak}")
     
-mode = input("teach oer student?: ").lower()
+mode = input("teacher or student?: ").lower()
 
 if mode == 'teacher':
     Teacher.flashcardmaker()
